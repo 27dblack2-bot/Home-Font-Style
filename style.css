@@ -7,6 +7,7 @@ body {
     color: #222222;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* MAIN HEADINGS */
@@ -18,9 +19,12 @@ h1 {
     text-shadow: 2px 2px 3px #999999;
 }
 
+h2, h3, h4 {
+    text-align: center;
+}
+
 h2 {
     font-size: 1.8rem;
-    text-align: center;
 }
 
 h3 {
@@ -34,13 +38,24 @@ h4 {
 /* LINKS */
 a {
     text-decoration: none;
+    color: #222222;
+}
+
+/* SECTION SPACING */
+section, header, footer {
+    padding: 2em 3%;
+    box-sizing: border-box;
 }
 
 /* HEADER STYLES */
 header {
     text-align: center;
-    padding: 20px;
+    padding: 2em;
     background-color: #dddddd;
+}
+
+header img {
+    width: 70px;
 }
 
 /* NAV STYLES */
@@ -55,6 +70,7 @@ nav ul {
 
 nav li {
     margin: 10px;
+    padding: 0.7em;
 }
 
 nav li a {
@@ -69,11 +85,12 @@ nav li a {
 .btn {
     font-size: 1rem;
     display: inline-block;
-    padding: 12px 25px;
+    padding: 0.8em 1.5em;
     background-color: #222222;
     color: white;
     border-radius: 5px;
     margin: 15px;
+    text-align: center;
 }
 
 /* FLEX CONTAINER STYLES */
@@ -102,7 +119,9 @@ nav li a {
 /* HERO SECTION STYLES */
 #hero {
     text-align: center;
-    padding: 30px 15px;
+    height: 60vh;
+    min-height: 400px;
+    padding: 2em 1em;
 }
 
 #hero img {
@@ -114,16 +133,7 @@ nav li a {
 
 /* GUIDE SECTION STYLES */
 #guide {
-    padding: 20px;
-}
-
-#guide p,
-#guide h2 {
-    text-align: center;
-}
-
-#guide p {
-    font-size: 1.1rem;
+    padding: 2em;
 }
 
 #guide .flex-item {
@@ -133,15 +143,24 @@ nav li a {
 }
 
 #guide img {
-    width: 100%;
-    height: 200px;
+    width: 50%;
+    height: 180px;
     object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+#guide p {
+    font-size: 1.1rem;
+    max-width: 300px;
+    margin: 1em auto;
+    text-align: center;
 }
 
 /* ABOUT SECTION STYLES */
 #about {
     text-align: center;
-    padding: 20px;
+    padding: 2em;
 }
 
 #about li {
@@ -158,11 +177,21 @@ nav li a {
     flex: 1;
     min-width: 250px;
     padding: 20px;
+    margin: auto;
+}
+
+#about img {
+    width: 90%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: cover;
+    margin-left: 1em;
+    border-radius: 8px;
 }
 
 /* INFORMATION SECTION STYLES */
 #info {
-    padding: 20px;
+    padding: 2em;
 }
 
 #info p {
@@ -173,7 +202,8 @@ nav li a {
     font-size: 2rem;
     font-weight: bold;
     float: left;
-    margin-right: 10px;
+    margin-right: 15px;
+    padding-right: 10px;
 }
 
 #info h2 {
@@ -193,19 +223,28 @@ nav li a {
     max-width: 400px;
     height: 200px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 /* GALLERY SECTION */
 #gallery {
     text-align: center;
-    padding: 20px;
+    padding: 1em;
+}
+
+#gallery .flex-container {
+    padding: 10px;
+    gap: 20px;
 }
 
 #gallery img {
-    width: 30%;
-    min-width: 200px;
-    height: 200px;
+    width: 10%;
+    min-width: 90px;
+    max-width: 130px;
+    height: 75px;
     object-fit: cover;
+    display: block;
+    margin: auto;
 }
 
 /* BANNER BUTTON SECTION */
@@ -213,7 +252,8 @@ nav li a {
     text-align: center;
     font-weight: bold;
     font-variant: small-caps;
-    padding: 30px;
+    padding: 3em 1em;
+    margin-top: 1em;
     background-color: #dddddd;
 }
 
@@ -222,13 +262,18 @@ footer {
     text-align: center;
     font-size: 0.85rem;
     font-weight: normal;
-    padding: 20px;
+    padding: 2em;
     background-color: #222222;
     color: white;
 }
 
+footer p, footer h2 {
+    text-align: center;
+}
+
 footer i {
     font-size: 1.5rem;
+    margin-right: 15px;
 }
 
 footer li {
@@ -249,7 +294,15 @@ footer li {
         flex-direction: column;
     }
 
+    #guide img {
+        width: 70%;
+    }
+
+    #about img {
+        margin-left: 0;
+    }
+
     #gallery img {
-        width: 100%;
+        width: 30%;
     }
 }
