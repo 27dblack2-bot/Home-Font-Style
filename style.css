@@ -1,14 +1,15 @@
 
-/* Main page styling */
+/* MAIN PAGE STYLING */
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     background-color: #f2f2f2;
     color: #222222;
     margin: 0;
+    padding: 0;
 }
 
-/* Main headings */
+/* MAIN HEADINGS */
 h1 {
     font-size: 2.5rem;
     text-align: center;
@@ -30,18 +31,32 @@ h4 {
     font-size: 1.2rem;
 }
 
-/* Links */
+/* LINKS */
 a {
     text-decoration: none;
 }
 
-/* Header styles */
+/* HEADER STYLES */
 header {
     text-align: center;
     padding: 20px;
+    background-color: #dddddd;
 }
 
-/* Navigation styles */
+/* NAV STYLES */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 10px;
+}
+
 nav li a {
     line-height: 2;
     letter-spacing: 1px;
@@ -50,14 +65,15 @@ nav li a {
     font-weight: bold;
 }
 
-nav li {
-    display: inline-block;
-    margin: 10px;
-}
-
-/* Buttons */
+/* BUTTON STYLES */
 .btn {
     font-size: 1rem;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #222222;
+    color: white;
+    border-radius: 5px;
+    margin: 15px;
 }
 
 /* FLEX CONTAINER STYLES */
@@ -70,22 +86,37 @@ nav li {
     padding: 20px;
 }
 
+.flex-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
 .flex-container img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
-/* Hero section */
+/* HERO SECTION STYLES */
 #hero {
     text-align: center;
+    padding: 30px 15px;
 }
 
 #hero img {
+    width: 500px;
     max-width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
-/* Guide section */
+/* GUIDE SECTION STYLES */
+#guide {
+    padding: 20px;
+}
+
 #guide p,
 #guide h2 {
     text-align: center;
@@ -97,24 +128,30 @@ nav li {
 
 #guide .flex-item {
     flex: 1;
-    min-width: 200px;
-    padding: 15px;
+    min-width: 220px;
     text-align: center;
 }
 
 #guide img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
 }
 
-/* About section */
+/* ABOUT SECTION STYLES */
+#about {
+    text-align: center;
+    padding: 20px;
+}
+
 #about li {
     list-style-type: none;
     font-size: 1rem;
+    padding: 5px;
 }
 
-#about {
-    text-align: center;
+#about ul {
+    padding: 0;
 }
 
 #about .flex-item {
@@ -123,7 +160,11 @@ nav li {
     padding: 20px;
 }
 
-/* Information section */
+/* INFORMATION SECTION STYLES */
+#info {
+    padding: 20px;
+}
+
 #info p {
     font-size: 1rem;
 }
@@ -144,20 +185,46 @@ nav li {
     flex: 1;
     min-width: 250px;
     padding: 20px;
+    text-align: center;
 }
 
-/* Banner button section */
+#info img {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* GALLERY SECTION */
+#gallery {
+    text-align: center;
+    padding: 20px;
+}
+
+#gallery img {
+    width: 30%;
+    min-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* BANNER BUTTON SECTION */
 #btn-banner {
     text-align: center;
     font-weight: bold;
     font-variant: small-caps;
+    padding: 30px;
+    background-color: #dddddd;
 }
 
-/* Footer */
+/* FOOTER STYLES */
 footer {
     text-align: center;
     font-size: 0.85rem;
     font-weight: normal;
+    padding: 20px;
+    background-color: #222222;
+    color: white;
 }
 
 footer i {
@@ -166,4 +233,23 @@ footer i {
 
 footer li {
     list-style-type: none;
+}
+
+/* MOBILE RESPONSIVE STYLES */
+@media screen and (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    #gallery img {
+        width: 100%;
+    }
 }
