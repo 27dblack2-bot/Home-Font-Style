@@ -5,6 +5,7 @@ body {
     font-size: 16px;
     background-color: #f2f2f2;
     color: #222222;
+    margin: 0;
 }
 
 /* Main headings */
@@ -34,7 +35,13 @@ a {
     text-decoration: none;
 }
 
-/* Navigation links */
+/* Header styles */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation styles */
 nav li a {
     line-height: 2;
     letter-spacing: 1px;
@@ -43,14 +50,39 @@ nav li a {
     font-weight: bold;
 }
 
+nav li {
+    display: inline-block;
+    margin: 10px;
+}
+
 /* Buttons */
 .btn {
     font-size: 1rem;
 }
 
+/* FLEX CONTAINER STYLES */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.flex-container img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Hero section */
 #hero {
     text-align: center;
+}
+
+#hero img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Guide section */
@@ -63,6 +95,18 @@ nav li a {
     font-size: 1.1rem;
 }
 
+#guide .flex-item {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    text-align: center;
+}
+
+#guide img {
+    width: 100%;
+    height: auto;
+}
+
 /* About section */
 #about li {
     list-style-type: none;
@@ -73,6 +117,12 @@ nav li a {
     text-align: center;
 }
 
+#about .flex-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+}
+
 /* Information section */
 #info p {
     font-size: 1rem;
@@ -81,11 +131,19 @@ nav li a {
 #info i {
     font-size: 2rem;
     font-weight: bold;
+    float: left;
+    margin-right: 10px;
 }
 
 #info h2 {
     font-size: 1.8rem;
     text-align: center;
+}
+
+#info .flex-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
 }
 
 /* Banner button section */
@@ -104,4 +162,8 @@ footer {
 
 footer i {
     font-size: 1.5rem;
+}
+
+footer li {
+    list-style-type: none;
 }
